@@ -1,0 +1,385 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{*\\Analysis on Side Effects of Covid 19 Vaccination
+{\footnotesize \textsuperscript{*}}
+}
+
+\author{\IEEEauthorblockN{ Pravallika Vallapuri}
+\IEEEauthorblockA{\textit{Master of Science in Data Analytics} \\
+\textit{Spring 2021}\\
+San Jose State University \\
+pravallika.vallapuri@sjsu.edu}
+\and
+\IEEEauthorblockN{Nikita Balani}
+\IEEEauthorblockA{\textit{Master of Science in Data Analytics} \\
+\textit{Spring 2021}\\
+San Jose State University \\
+nikita.balani@sjsu.edu}
+\and
+\IEEEauthorblockN{Nirvisha Garara}
+\IEEEauthorblockA{\textit{Master of Science in Data Analytics} \\
+\textit{Spring 2021}\\
+San Jose State University \\
+nirvisha.garara@sjsu.edu}
+\and
+\IEEEauthorblockN{Jinu Rose Mathew}
+\IEEEauthorblockA{\textit{Master of Science in Data Analytics} \\
+\textit{Spring 2021}\\
+San Jose State University \\
+jinurose.mathew@sjsu.edu}
+\and
+\IEEEauthorblockN{Vineeth Reddy Chinthala}
+\IEEEauthorblockA{\textit{Master of Science in Data Analytics} \\
+\textit{Spring 2021}\\
+San Jose State University \\
+vineethreddy.chinthala@sjsu.edu}
+\and
+
+}
+
+\maketitle
+
+\begin{abstract}
+COVID-19 is spread by the SARS-CoV-2 virus (CoronaVirus Infectious Disease-19). In December of 2019, the first case was identified. The COVID-19 pandemic is wreaking havoc on people all over the world right now. Because of the virus's scope and magnitude, as well as the lack of a clear clinical range, vaccine development has accelerated at an exponential pace.Vaccine portals and methods are being studied in a variety of ways.
+The aim of our investigation is to figure out which vaccine caused the most harm, which age demographic was most affected by the vaccine's side effects, and how vaccination affects patients who are already infected.
+\\
+
+
+
+
+\end{abstract}
+
+\\
+
+\section{Introduction}
+The Food and Drug Administration (FDA) and the Centers for Disease Control and Prevention (CDC) developed the Vaccine Adverse Event Reporting System (VAERS) to gather details on vaccine-related adverse effects. There is no such thing as a side effect-free prescription medication or biological device, such as a vaccine.Many people are protected from harmful diseases by vaccinations, but vaccines, like medications, may have side effects, some of which are severe. VAERS is used to continuously track data to see whether every drug or vaccine lot has a higher number of events than predicted.\\
+
+Doctors and other vaccine suppliers are advised to monitor adverse effects, even though they are unsure if the injection is to blame. Since it's impossible to tell the difference between a coincidental occurrence and one triggered by a vaccine, the VAERS archive will have all kinds of events.\\
+
+Furthermore, it is common for more than one vaccine to be given, making it impossible to pinpoint which vaccine was responsible for the incident. When reviewing individual cases, analysts look at the medical records about the incident and, if possible, get more detailed information from the media. The monitoring patterns for vaccinations and vaccination lots are examined.\\
+
+Fevers, redness, and swelling at the injection site account for between 85-90 percent of vaccine adverse effect reports. The remaining records (less than 15 percentage) detail critical incidents including hospitalizations, life-threatening injuries, or casualties.Severe case accounts are of the utmost importance to VAERS, and they are scrutinized with the utmost caution. Researchers at VAERS use protocols and techniques of study to help them keep a close eye on vaccine safety.\\
+
+\section{Significance to the Real World}
+
+When vaccines square measure prepared for tests in humans, they're tested on thousands to tens of thousands of volunteers. However, even this huge variety isn't continually enough to search out rare aspect effects, like a one in-a-million aspect impact. Sometimes, it's solely when a vaccine has been approved and used loosely that rare aspect effects are detected by observation systems like VAERS. So, VAERS is required to perpetually search for attainable aspect effects that may not be detected antecedently.\\
+
+
+There is currently no consensus on how to treat a covid infection. There is also a misunderstanding about how effective vaccines are in combating the virus. People are generally distrustful of healthcare facilities, so as a result, these specifics can be used sed in future messaging. By engaging in these behaviors, we reduce our chances of being ill or contracting the illness. COVID-19 is a human-infectious virus. We will increase our chances of contracting COVID-19 and spreading it by engaging in such behaviors. The initiative will advise pharmaceutical providers, insurance companies, and consultants based on indirect relationships and concrete actions to be taken in terms of planning and operation for the public benefit by creating an ambitious course of action in terms of decision-making and support.
+
+
+
+
+
+\section{Literature Review}
+
+\begin{itemize}
+\item While going through all the datasets available for covid 19 on various sources like kaggle,data.gov etc. we came across the Vaccine Adverse Effect Reporting System(VAERS) website. It is a forecasting system to detect safety problems in US-licenced vaccines.\\
+
+\item VAERS identifies and detects the adverse effects of any vaccination used in the country. VAERS is co-managed by Central Disease Control(CDC) and US Food and Drug Administration(FDA).\\
+
+
+
+\item Amidst pandemic situations around the world due to COVID-19 disease, the vaccine for covid-19 was developed in almost 1-1.5 years instead of the 10-15 years that usual vaccine development takes. After the development of covid-19 vaccine,some people were hesitant but most of the people started taking the vaccine around the world. Currently there are 3 vaccines in USA Pfizer/Biotech, Moderna and Johnson And Johnson and VAERS is collecting the data of the people who got side effects after getting these vaccinations.\\
+
+\item We realized that studying the negative effects of covid-19 vaccination would aid in understanding the efficacy of various vaccines.\\
+
+\section{Project Development Methodology
+}
+
+\item This project was created using the agile methodology of pair programming. It is a software development method . 
+
+\item Using the pair programming has improved the time management for the coding and testing part of the project. Also establishing teamwork amongst the team was comparatively easy by using this approach. We can say that so far the project outcome has been affected very positively by using a pair programming approach alongside the development.
+\item To follow pair programming methods during pandemic we arranged google meet to arrange team’s driver-observer meetups, used cloud technologies like AWS, google doc, google sheet to work together. Usually the driver will share the screen while coding and the observer will observe the code and catch up the error.
+
+
+\section{Database Structure}
+
+The database consists of five tables namely \textbf{patient\_info}, \textbf{patient\_history}, \textbf{vaccine\_details} \textbf{symptoms}, \textbf{patient\_outcomes}. Patient\_info is the main table. The other tables are joined to the Patient\_info.
+
+\subsection{\textbf{patient\_info}}
+\item \textbf{Patient\_ID}: A serially allocated number that is used for recognition.
+\item \textbf{report\_date}: The date that the VAERS form data was received at processing center.
+\item \textbf{age\_yrs}: Age of vaccine recipient's recorded in years.
+\item \textbf{gender}: Vaccine recipient's sex.
+\item \textbf{vaccine\_date}:  Vaccinated date.
+
+\subsection{\textbf{patient\_history}}
+\item \textbf{Patient\_ID}: A serially allocated number that is used for recognition.
+\item \textbf{other\_meds}: Any prescribed or over-the-counter drugs that the vaccine patient was taking at the time of vaccination.
+\item \textbf{current\_illness}: Any ailments at the time of vaccination.
+\item \textbf{med\_history}: This attribute stores the previously diagnosed medical conditions.
+\item \textbf{prior\_vacc}: This attribute includes details about previous vaccine events.
+\item \textbf{allergies}: Any allergies that were present at the time of vaccination.
+
+\subsection{\textbf{vaccine\_details}}
+\item \textbf{Patient\_ID}: A serially allocated number that is used for recognition.
+\item \textbf{vaccine\_site}: This attribute indicates location of the vaccination.
+\item \textbf{vaccine\_route}: This attribute specifies the route of vaccine.
+\item \textbf{vaccine\_name}: The brand name of the vaccine
+administered.
+\item \textbf{dose\_series}: This attribute specifies the vaccine dose.
+\subsection{\textbf{symptoms}}
+\item \textbf{Patient\_ID}: A serially allocated number that is used for recognition.
+\item \textbf{symptoms\_1}: Initial Symptom.
+\item \textbf{symptoms\_2}: Second Symptom.
+\item \textbf{symptoms\_3}: Third Symptom.
+\item \textbf{symptoms\_4}: Fourth Symptom.
+\item \textbf{symptoms\_5}: Fifth Symptom.
+
+\subsection{\textbf{patient\_outcomes}}
+
+\item \textbf{Patient\_ID}: A serially allocated number that is used for recognition.\\
+
+\item \textbf{died}:  "Yes" is used if the vaccine recipient died; otherwise, the letter "No" is used.\\
+
+\item \textbf{date\_of\_death}: If the vaccinated person expired, this field will just be blank to write down the date of death; otherwise, it will be filled in with the date of death.\\
+
+
+\item \textbf{life\_threat}: A "Yes" is used if the vaccinated person experienced a harmful event as a result of the vaccination; otherwise, a "No" is used.\\
+
+\item \textbf{hospitalized}: If the vaccinated person is hospitalized then "Yes" else "No"\\
+
+
+\item \textbf{hospital\_days}: It records no of days the vaccinated person is hospitalized .\\
+
+
+\item \textbf{prolonged\_stay}: If vaccinated person extents his stay in hospital then "Yes" otherwise "No".\\
+
+
+\item \textbf{disabilites}: If the vaccine person became disable because of vaccine enter a "Yes" here; otherwise, enter a "No".\\
+
+
+\item \textbf{recovered}: A "Yes" is entered in the field if the vaccinated person is recovered,otherwise "NO".\\
+
+\section{Entity Relationship Diagram}
+An entity-relationship diagram depicts the relationships between entity sets contained in a database (ERD). In this way, an individual, or a data unit, is an entity. The term "entity package" refers to a collection of similar entities. Attributes are to specify properties for these entities.We can see from the ERD that Patient Info is a table with several relationships, including vaccine details, patient outcomes, symptoms, and patient history, as well as the establishment of a foreign key for the same.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{image9.png}
+    \caption{Entity Relationship Diagram}
+    \label{fig:galaxy}
+\end{figure}
+ 
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{pasted image 0.png}
+    \caption{Entity Relationship Diagram generated using Postgres}
+    \label{fig:galaxy}
+\end{figure}
+
+
+
+
+\section{Analysis}\\
+
+\item Each table contains 58,172 records who faced adverse reactions after taking the vaccination.\\
+\item Out of them 42,109 are female and 13,938 are male and 2,125 are others.\\
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{image2.png}
+    \caption{Gender Distribution}
+    \label{fig:galaxy}
+\end{figure}\\
+
+\item From the above analysis we could predict that in females the adverse reactions are more when compared to males and others.\\
+
+
+\item From the analysis we could see that many people got vaccinated to Moderna are facing more adverse reactions when compared to Pfizer and Janssen.
+\item From the analysis it is shown that Moderna has more effect on the people in their first dosage of the vaccination when compared to Pfizer. But in second dosage the effect of Pfizer is more when compared to Moderna.
+
+\item 4.603 percent people who faced reactions after taking Moderna are died.
+\item 4.65 percent people who faced reactions after taking Pfizer are died.
+\item 1.06 percent people who faced reactions after taking Janssen are died.
+\item Janssen's death rate was comparitively very low when compared to other two vaccines.
+\item Eventhough people effected rate of Moderna is high death rate of both 
+
+\item People from California State has faced more adverse reactions in United States than any other state.
+
+\section{Design Steps}
+
+ \begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{imgae12.png}
+    \caption{Design Steps}
+    \label{fig:galaxy}
+\end{figure}\\
+
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{image3.png}
+    \caption{Patient Count-Vaccine}
+    \label{fig:galaxy}
+\end{figure}
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=6cm]{unnamed.png}
+    \caption{Dosage effect on People}
+    \label{fig:galaxy}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{image11.png}
+    \caption{Top-10 Symptoms}
+    \label{fig:galaxy}
+\end{figure}
+
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{image4.png}
+    \caption{Count of people who expired after taking vaccination based on vaccine name}
+    \label{fig:galaxy}
+\end{figure}
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{image5.png}
+    \caption{State wide effected count}
+    \label{fig:galaxy}
+\end{figure}
+
+
+
+
+\section{Technical Difficulty}
+\subsection{With Postgres}
+\item Our dataset contains many features and we were facing difficulties in loading all of them in one table, we solved this by splitting the data into different tables and establishing relationships between them.
+\item We are using tableau for visualization so while connecting postgres to tableau we faced difficulty in making connections.
+
+\subsection{With AWS}
+\item While making connections from s3 to glue to redshift we faced issues with endpoints, which was then resolved by creating VPC endpoints.
+ \subsection{With Pandas}
+ \item File encoding issue with the dataset of 2021vaersdata , so we changed the encoding from csv to iso-8859-1 while reading pandas.
+\item And while loading the database we changed the encoding of the csv file manually using excel to utf8.
+
+
+
+\section{Data Visualization}
+
+\item Data visualization is a graph, diagram, or other graphic representation of data or information. It conveys relationships by combining details and images. This is important because it facilitates the detection of trends and patterns. When big data becomes more common, we must be able to access increasingly bigger batches of data.
+
+\item Tableau is a popular data visualization platform in the business intelligence field that is rapidly increasing in popularity. It aids in the translation of raw data into an understandable format. Tableau makes it easier to create facts that researchers at all levels of an enterprise can understand.
+
+\item Seaborn is a Python data visualization library built on matplotlib. It comes with a high-level graphical user interface for producing visually pleasing and informative statistical graphics.
+
+
+
+
+
+\section{AWS Implementation}
+In AWS, we loaded the data into s3 buckets and then created a VPC End point and from s3 we moved the data to crawler which is stored in Glue Catalog and then used to Glue job to load the data from S3 to Redshift and then used nosql data base Dynamodb  for table creation of one table and then loaded the data to s3 using Lambda functions.
+
+
+\section{Lessons Learned}
+
+\item Designing the tables (or Data Modelling) is the most important step and should be done in the early stage of the project.
+\item We have loaded data  in the postgres database from csv files. Before loading the data the files should include cleaned data only otherwise it become tedious task to clean and load at every step after an error is thrown by database
+\item Data cleaning with an ETL tool like AWS glue is much easier than python pandas.
+
+\section{AWS Implementation}
+In AWS, we loaded the data into s3 buckets and then created a VPC End point and from s3 we moved the data to crawler which is stored in Glue Catalog and then used to Glue job to load the data from S3 to Redshift and then used nosql data base Dynamodb  for table creation of one table and then loaded the data to s3 using Lambda functions.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{image8.png}
+    \caption{AWS Implementation-I}
+    \label{fig:galaxy}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{image13.png}
+    \caption{AWS Implementation-II}
+    \label{fig:galaxy}
+\end{figure}
+
+\section{Essential Outcomes}
+\item According to our analysis on the data that we have collected from VAERS, the maximum number of patients had taken Moderna. 
+\item Maximum number of people belong to states like California, Texas and New York.
+\item There are very few patients who have died due to the severe side effects of covid vaccine. Total of 4.3 % people died from covid-19 vaccine side effects.
+\item Total 8.9 percentage  people were hospitalized out of all the patients.
+Out of all patients, 5004 people were hospitalized from which 64 had the prolonged\_stay which is over 20 days.
+
+
+\item According to our analysis on the data that we have collected from VAERS, the maximum number of patients had taken Moderna. 
+\item Maximum number of people belong to states like California, Texas and New York.
+
+\section{Version Control}
+
+We uploaded our work to github and shared it with the public, which allows anyone to keep track of our progress and easily explore the changes we've made, whether it's data, coding scripts, notes, or anything else.
+
+\item Link - https://github.com/nirvishagarara/Data225-CovidVaccineEffect-Project
+\section{Conclusion}
+In conclusion, the analysis on covid-19 vaccines’ side effects will help in preventing the future casualties also. If the disease-prevention effects of vaccines outweigh the dangers of a previously discovered side effect, the vaccine can still be recommended. The packaging insert for the vaccine, which lists safety details, is updated with information about recently discovered side effects.
+
+
+
+
+
+
+
+\begin{thebibliography}{00}
+\bibitem{b1} https://vaers.hhs.gov/index.html.\\
+\bibitem{b2} https://www.healthline.com/health-news/heres-how-it-was-possible-to-develop-covid-19-vaccines-so-quickly#Hard-work-and-luck-played-a-part
+\\
+\bibitem{b3} https://www.medrxiv.org/content/10.1101/2021.05.06.21256282v1\\
+\bibitem{b4} https://www.reuters.com/article/factcheck-vaers-deaths/fact-check-vaers-data-does-not-prove-thousands-died-from-receiving-covid-19-vaccines-idUSL1N2LV0NY\\
+
+
+\section{Term Project Rubric}
+\\
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{qq.png}
+    
+    \label{fig:galaxy}
+\end{figure}
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{ww.png}
+    
+    \label{fig:galaxy}
+\end{figure}
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=9cm]{rr.png}
+    
+    \label{fig:galaxy}
+\end{figure}
+
+Youtube Video Link- https://www.youtube.com/watch?v=36cjwW-rl8g
+\end{document}
+
+
